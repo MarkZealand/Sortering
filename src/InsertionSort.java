@@ -9,15 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 //INSERTION SORT
 public class InsertionSort {
-    public static void Run(Scanner input) throws IOException {
-        List<String> lines = Files.readAllLines(Paths.get("worstcase.txt"));
-        List<Integer> numre = new ArrayList<>();
+    public static void Run(List<Integer> numre) throws IOException {
 
-        for (String line : lines) {
-            for (String value : line.split(",")) {
-                numre.add(Integer.parseInt(value.trim()));
-            }
-        }
         long startTime = System.nanoTime();
         int arrayLength = numre.size();
         for (int i = 1; i < arrayLength; i++) {
@@ -35,3 +28,21 @@ public class InsertionSort {
         System.out.println("Duration: " + durationInMillis + "ms");
     }
 }
+
+/*
+procedure InsertionSort(array)
+    n = længden af array
+
+    for i = 1 til n - 1 gør
+        nuværendeElement = array[i]
+        j = i - 1
+
+        mens j >= 0 og array[j] > nuværendeElement gør
+            array[j + 1] = array[j]
+            j = j - 1
+        slut mens
+
+        array[j + 1] = nuværendeElement
+    slut for
+slut procedure
+ */

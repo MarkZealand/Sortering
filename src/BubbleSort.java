@@ -10,17 +10,7 @@ import java.io.File;
 //BUBBLE SORT
 
 public class BubbleSort {
-    public static void Run(Scanner input) throws IOException {
-        File smallWordList = new File("100.txt");
-
-        List<String> lines = Files.readAllLines(Paths.get("100.txt"));
-        List<Integer> numbers = new ArrayList<>();
-
-        for (String line : lines) {
-            for (String value : line.split(",")) {
-                numbers.add(Integer.parseInt(value.trim()));
-            }
-        }
+    public static void Run(List<Integer> numbers) throws IOException {
 
         int loopsLeft = numbers.size();
         boolean swapped = true;
@@ -45,3 +35,19 @@ public class BubbleSort {
         }
     }
 }
+
+/*
+ procedure BubbleSort(array)
+    n = længden af array
+    repeat
+        swapped = false
+        for i = 0 to n - 2 do
+            if array[i] > array[i + 1] then
+                bytte array[i] og array[i + 1]
+                swapped = true
+            end if
+        end for
+        n = n - 1
+    until not swapped
+end procedure
+ */

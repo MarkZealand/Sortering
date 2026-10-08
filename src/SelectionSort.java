@@ -8,16 +8,7 @@ import java.util.Scanner;
 //SELECTION SORT
 
 public class SelectionSort {
-    public static void Run(Scanner input) throws IOException {
-
-        List<String> lines = Files.readAllLines(Paths.get("100.txt"));
-        List<Integer> numre = new ArrayList<>();
-
-        for (String line : lines) {
-            for (String value : line.split(",")) {
-                numre.add(Integer.parseInt(value.trim()));
-            }
-        }
+    public static void Run(List<Integer> numre) throws IOException {
 
         int lineLength = numre.size();
 
