@@ -9,7 +9,7 @@ import java.io.File;
 
 //BUBBLE SORT
 
-public class OpgaveEt {
+public class BubbleSort {
     public static void Run(Scanner input) throws IOException {
         File smallWordList = new File("100.txt");
 

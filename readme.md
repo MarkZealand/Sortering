@@ -1,24 +1,30 @@
-n = længden af array
+procedure QuickSort(array, low, high)
+if low < high then
+        // Find pivot-elementets korrekte position i det sorterede array
+        pivotIndex = Partition(array, low, high)
+        // Rekursivt sorter elementerne før og efter pivot
+        QuickSort(array, low, pivotIndex - 1)
+        QuickSort(array, pivotIndex + 1, high)
+end if
 
-    // Start med et stort gap og reducer det gradvist
-    gap = n / 2
 
-    while gap > 0 do
-        // Udfør en gap-sortering for det aktuelle gap
-        for i = gap to n - 1 do
-            temp = array[i]
-            j = i
+// Partition-funktionen opdeler arrayet og returnerer det korrekte pivot-index
+procedure Partition(array, low, high)
+    pivot = array[high]  // Vælg det sidste element som pivot
+    i = low - 1          // Index for det mindre element
+    for j = low to high - 1 do
+        if array[j] <= pivot then
+            i = i + 1
+            Swap(array[i], array[j])  // Byt array[i] og array[j]
+        end if
+    end for
+    // Byt pivot til sin korrekte position
+    Swap(array[i + 1], array[high])
+    return i + 1  // Returner pivot-elementets indeks
 
-            // Flyt elementer af arrayet, der er gap pladser bagud
-            while j >= gap and array[j - gap] > temp do
-                array[j] = array[j - gap]
-                j = j - gap
-            end while
 
-            // Placer temp på sin korrekte position
-            array[j] = temp
-        end for
-
-        // Reducer gap for næste iteration
-        gap = gap / 2
-    end while
+// Swap-funktion bytter to elementer i arrayet
+procedure Swap(a, b)
+    temp = a
+    a = b
+    b = temp

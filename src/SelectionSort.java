@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 //SELECTION SORT
 
-public class OpgaveFem {
+public class SelectionSort {
     public static void Run(Scanner input) throws IOException {
 
         List<String> lines = Files.readAllLines(Paths.get("100.txt"));

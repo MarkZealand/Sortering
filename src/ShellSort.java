@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 
 //SHELL SORT
-public class OpgaveSeks {
+public class ShellSort {
     public static void Run(Scanner input) throws IOException {
 
         List<String> lines = Files.readAllLines(Paths.get("100.txt"));

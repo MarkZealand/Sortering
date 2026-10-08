@@ -3,46 +3,36 @@ import java.util.Scanner;
 
 void main() throws IOException {
     Scanner input = new Scanner(System.in);
-    System.out.print("Vælg opgavens nummer: ");
+    System.out.println("===Vælg sorteringsmetode===");
+    System.out.println("1. BubbleSort");
+    System.out.println("2. InsertionSort");
+    System.out.println("3. SelectionSort");
+    System.out.println("4. ShellSort");
+    System.out.println("5. QuickSort");
+    System.out.print("Indtast 1-5: ");
     int choice = input.nextInt();
 
     switch(choice) {
         case 1:
             //BUBBLE
-            OpgaveEt.Run(input);
+            BubbleSort.Run(input);
             break;
         case 2:
-            OpgaveTo.Run(input);
+            //INSERTION
+            InsertionSort.Run(input);
             break;
         case 3:
-            //BUBBLE
-            OpgaveTre.Run(input);
+            //SELECTION SORT
+            SelectionSort.Run(input);
             break;
         case 4:
-            //INSERTION
-            OpgaveFire.Run(input);
+            //SHELL SORT
+            ShellSort.Run(input);
             break;
         case 5:
-            //SELECTION SORT
-            OpgaveFem.Run(input);
-            break;
-        case 6:
-            //SHELL SORT
-            OpgaveSeks.Run(input);
-            break;
-        case 7:
-            OpgaveSyv.Run(input);
-            break;
-        case 8:
-            OpgaveOtte.Run(input);
-            break;
-        case 9:
-            OpgaveNi.Run(input);
-            break;
-        case 10:
-            OpgaveTi.Run(input);
+            QuickSort.Run(input);
             break;
         default:
-            System.out.println("Ugyldigt valg. Vælg et nummer mellem 1 og 10.");
+            System.out.println("Ugyldigt valg. Vælg et nummer mellem 1 og 5.");
     }
 }
