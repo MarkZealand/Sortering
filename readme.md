@@ -1,7 +1,6 @@
 # Sorteringsalgoritmer – 1. semester, Datamatiker (Næstved, 2026)
 
 Eksempel på løsning af de 5 sorteringsalgoritmer, med mulighed for forskellige datasæt.
-Opgaven er lavet som en del af 1. semester på Datamatikeruddannelsen i Næstved (2026).
 
 ## Sorteringsalgoritmer
 
