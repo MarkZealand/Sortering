@@ -10,8 +10,6 @@ import java.util.concurrent.TimeUnit;
 //INSERTION SORT
 public class InsertionSort {
     public static void Run(List<Integer> numre) throws IOException {
-
-        long startTime = System.nanoTime();
         int arrayLength = numre.size();
         for (int i = 1; i < arrayLength; i++) {
             int currentIndex = numre.get(i);
@@ -22,10 +20,6 @@ public class InsertionSort {
             }
             numre.set(previousIndex+1, currentIndex);
         }
-
-        long endTime = System.nanoTime();
-        long durationInMillis = TimeUnit.NANOSECONDS.toMillis(endTime - startTime);
-        System.out.println("Duration: " + durationInMillis + "ms");
     }
 }
 

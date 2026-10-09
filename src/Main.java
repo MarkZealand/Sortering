@@ -66,6 +66,8 @@ private static void showSortMenu(Scanner input, List<Integer> numbers) throws IO
 
 
 private static void loadSorting(int choice, List<Integer> numbers) throws IOException {
+
+    long startTime = System.nanoTime();
     switch(choice) {
         case 1:
             //BUBBLE
@@ -89,4 +91,5 @@ private static void loadSorting(int choice, List<Integer> numbers) throws IOExce
         default:
             System.out.println("Ugyldigt valg. Vælg et nummer mellem 1 og 5.");
     }
-}
+    long endTime = System.nanoTime();
+    System.out.println("Duration: " + (endTime - startTime) + " ns");}
